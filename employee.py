@@ -30,8 +30,14 @@ while True:
         mydatabase.commit()
     elif choice==2:
         print("view all employee selected ")
+        sql = 'SELECT * FROM `employee` ' 
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        for i in result:
+            print(result)
     elif choice==3:
         print("search the  employee  ")
+        
     elif choice==4:
         print("update the employee  ")
     elif choice==5:
